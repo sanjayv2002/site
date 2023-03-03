@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}
+      <title> Home Page </title>
+{% endblock title%}
+{% block content %}
+      <div class="container">
+        <div class="img-container">
+          <img
+          src="static/Glitched logo.jpg"
+          alt="event-logo"
+          class="image"
+          >
+          <img
+          src="static\The_redemption_ark_logo-removebg-preview.png"
+          id="event-img"
+          alt="Event logo"
+          class="image"
+          />
+        </div> 
+        <div class="right-column">
+          <p class="text">
+            Welcome to the GLITCHED! <br><br>
+            Bypass the obstacles, decode hidden puzzles
+            and debug the programs. <br><br>Follow the instructions on the screen of the
+            application. You may have to temporarily minimize the application
+            every time you work on the source code file. <br><br>Once you are ready, hit
+            the BEGIN button to receive the specifics to your task!
+          </p>
+          <form action="/loading" method="GET">
+            <button class="cybr-btn">
+              BEGIN<span aria-hidden></span>
+              <span aria-hidden class="cybr-btn__glitch">BEGIN</span>
+              <span aria-hidden class="cybr-btn__tag">Begin</span>
+            </button>
+          </form>
+        </div>
+      </div>
+{% endblock content%}

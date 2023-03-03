@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title> Loading </title>
+        <style>
+            body{
+                box-sizing: border-box;
+                margin: 0px;
+                padding: 0px;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <video id="myVideo" src="{{ url_for('static', filename='Hackerz loading.mp4') }}" autoplay>
+        </video>
+        
+    </body>
+    <script>
+        const video = document.getElementById("myVideo");
+        video.addEventListener("ended", function() {
+            window.location.href = "/assistant"; // replace "/" with the desired page URL
+        });
+    </script>   
+</html>

@@ -1,0 +1,28 @@
+{% extends 'roundbase.html' %}
+{% block round_title %}
+
+<title>Round Two</title>
+
+{% endblock round_title %}
+{% block round_messages %}
+{% for category, message in get_flashed_messages(with_categories=True) %}
+  <div class="alert-{{category}}">Error: {{ message }}</div>
+{% endfor %}
+{% endblock round_messages %}
+{% block text_instructions %}
+
+<p> Content </p>
+{% endblock text_instructions %}
+{% block form %}
+
+<form action  = "{{ url_for('submit_round2') }}" method = "post">
+ 
+  <input type="text"  class = "text-field" name="submission" id="submission"><br><br>
+
+<button class="cybr-btn">
+  ACTIVATE<span aria-hidden></span>
+  <span aria-hidden class="cybr-btn__glitch">ACTIVATE</span>
+  <span aria-hidden class="cybr-btn__tag">SERVERS</span>
+</button>
+</form>
+{% endblock form %}
