@@ -1,15 +1,36 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>NAMBA JEICHITOM MAARA</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        VARRTA MAMMEY DURRR
-        <script src="" async defer></script>
-    </body>
-</html>
+{% extends 'base.html' %}
+{% block title %}
+      <title>NAMMA JEICHITOM MAARAA!!!</title>
+{% endblock title%}
+{% block content %}
+      <div class="container">
+       <!--<div class="img-container">
+          <img
+          src="static/Glitched logo.jpg"
+          alt="event-logo"
+          class="image"
+          >
+          <img
+          src="static\The_redemption_ark_logo-removebg-preview.png"
+          id="event-img"
+          alt="Event logo"
+          class="image"
+          />
+        </div> -->
+        <div class="right-column">
+          <p class="text">
+            Bravo Leo! We made it! We have successfully recovered all the data of Nexus Entertainment that were lost into the Cyrus grid. Not only that, the solution to the weird file that you deduced was a major vulnerability in its network. <br><br>
+            I inspected its entire network. The flag that you found previously is our only way to kill Cyrus entirely. <br> <br>
+            Let’s do this Leo! Click the button below and let’s finish this once and for all!
+            
+          </p>
+          <form action="/bubyee" method="GET">
+            <button class="cybr-btn">
+             TERMINATE<span aria-hidden></span>
+              <span aria-hidden class="cybr-btn__glitch">TERMINATE</span>
+              <span aria-hidden class="cybr-btn__tag">Cyrus</span>
+            </button>
+          </form>
+        </div>
+      </div>
+{% endblock content%}

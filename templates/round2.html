@@ -6,12 +6,22 @@
 {% endblock round_title %}
 {% block round_messages %}
 {% for category, message in get_flashed_messages(with_categories=True) %}
-  <div class="alert-{{category}}">Error: {{ message }}</div>
+  <div class="alert-{{category}}">{{ message }}</div>
 {% endfor %}
 {% endblock round_messages %}
 {% block text_instructions %}
 
-<p> Content </p>
+<p>We must secure the customers’ data at once. The attack on Nexus is quite inexplicable. I tried installing our data encryption software Ruby on Nexus, but the Cyrus virus is sturdy. It entirely collapsed our codes. I need your manual help to resolve this issue. 
+  <ol class= "text">
+    <li class="list-item">Open the ruby_crypt.py file using IDLE (Python 3.7 64-bit).</li>
+    <li class = "list-item">Debug the syntax errors and run the program.</li>
+    <li class = "list-item">Input the following credentials once you have rectified the errors: <br>
+      a. Text value: NEXUS ENTERTAINMENT <br>
+      b. Key value: CYRUS
+      </li>
+    <li  class = "list-item">Once the encryption is successful, enter the Cipher value in the below text field to advance to the next level.</li>
+  </ol>
+</p>
 {% endblock text_instructions %}
 {% block form %}
 
@@ -20,9 +30,9 @@
   <input type="text"  class = "text-field" name="submission" id="submission"><br><br>
 
 <button class="cybr-btn">
-  ACTIVATE<span aria-hidden></span>
-  <span aria-hidden class="cybr-btn__glitch">ACTIVATE</span>
-  <span aria-hidden class="cybr-btn__tag">SERVERS</span>
+  VALIDATE<span aria-hidden></span>
+  <span aria-hidden class="cybr-btn__glitch">VALIDATE</span>
+  <span aria-hidden class="cybr-btn__tag">VALIDATE</span>
 </button>
 </form>
 {% endblock form %}

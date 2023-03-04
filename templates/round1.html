@@ -5,7 +5,10 @@
 {% endblock round_title %}
 {% block round_messages %}
 {% for category, message in get_flashed_messages(with_categories=True) %}
-  <div class="alert-{{category}}">Error: {{ message }}</div>
+
+{% if category == 'error' %}
+<div class="alert-{{category}}">{{ message }}</div>
+{% endif %}
 {% endfor %}
 {% endblock round_messages %}
 

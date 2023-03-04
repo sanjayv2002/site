@@ -1,0 +1,21 @@
+{% extends 'previewbase.html' %}
+{% block round_preview_title %}
+<title>GREATTTT!</title>
+{% endblock round_preview_title %}
+{% block round_messages %}
+{% for category, message in get_flashed_messages(with_categories=True) %}
+  <div class="alert-{{category}}">{{ message }}</div>
+{% endfor %}
+{% endblock round_messages %}
+{% block intromessage %}
+<p> Great! We are anonymous now! Let's dive in right into the Cyrus grid</p>
+{% endblock intromessage %}
+{% block button %}
+<form action="/round2" method="GET">
+  <button class="cybr-btn">
+   CYRUS<span aria-hidden></span>
+    <span aria-hidden class="cybr-btn__glitch">CYRUS</span>
+    <span aria-hidden class="cybr-btn__tag">CYRUS</span>
+  </button>
+</form>
+{% endblock button %}

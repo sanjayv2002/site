@@ -1,27 +1,45 @@
 {% extends 'roundbase.html' %}
 {% block round_title %}
 
-<title>Round Two</title>
+<title>Round Three</title>
 
 {% endblock round_title %}
 {% block round_messages %}
 {% for category, message in get_flashed_messages(with_categories=True) %}
-  <div class="alert-{{category}}">Error: {{ message }}</div>
+  <div class="alert-{{category}}">{{ message }}</div>
 {% endfor %}
 {% endblock round_messages %}
 {% block text_instructions %}
 
-<p> Content </p>
+<p>It seems that some of Nexus data is still under the Cyrus grid. There are a lot of text files, images and other cache files in its dataset. <br> <br>
+  Firstly, download the archive. Two of the images contain the key to authenticate the grid. Using that key we can crash the entire Cyrus grid. Your task now is to find the right images that contain the encoded key. It might be our way to mark the backdoor that Cyrus used to enter the Nexus’ network. <br> <br>
+  Make sure to debug the ‘Unravel’ file before decrypting the images. <br> <br>
+  <ol class= "text">
+    <li class="list-item">Open the  unravel.py  file using IDLE (Python 3.7 64-bit)</li>
+    <li class = "list-item">Debug the syntax errors and run the program.</li>
+    <li class = "list-item">The keys are hidden in two images.</li>
+    <li class = "list-item">Mention the path of the image file one by one and extract the keys.</li>
+    <li  class = "list-item">Concatenate the two keys and enter in the below text field.</li>
+  </ol>
+   </p>
+   <form method= "get" action = "{{ url_for('download')}}">
+    <button class="cybr-btn">
+      ARCHIVE<span aria-hidden></span>
+      <span aria-hidden class="cybr-btn__glitch">ARCHIVE</span>
+      <span aria-hidden class="cybr-btn__tag">ARCHIVE</span>
+    </button>
+   </form>
 {% endblock text_instructions %}
 {% block form %}
+      
       <form action  = "{{ url_for('submit_round3') }}" method = "post">
 
         <input type="text" class="text-field" name="submission" id="submission"><br><br>
     
       <button class="cybr-btn">
-        ACTIVATE<span aria-hidden></span>
-        <span aria-hidden class="cybr-btn__glitch">ACTIVATE</span>
-        <span aria-hidden class="cybr-btn__tag">SERVERS</span>
+        UNLOCK<span aria-hidden></span>
+        <span aria-hidden class="cybr-btn__glitch">UNLOCK</span>
+        <span aria-hidden class="cybr-btn__tag">UNLOCK</span>
       </button>
     </form>
     {% endblock form %}
