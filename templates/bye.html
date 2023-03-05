@@ -1,33 +1,34 @@
 {% extends 'base.html' %}
 {% block title %}
-      <title> VAARTA MAMEEY DURRRR!!! </title>
+<title> VAARTA MAMEEY DURRRR!!! </title>
 {% endblock title%}
 {% block content %}
-      <div class="container">
-        <div class="img-container">
-            <img
-          src="static/HackerzGif.gif"
-          alt="event-logo"
-          class="image"
-          >
-          <img
-          src="static/Glitched logo.jpg"
-          alt="event-logo"
-          class="image"
-          >
-          <img
-          src="static\The_redemption_ark_logo-removebg-preview.png"
-          id="event-img"
-          alt="Event logo"
-          class="image"
-          />
-        </div> 
-        <div class="right-column">
-          <p class="text">
-           MISSION ACCOMPLISHED <br>
-           RESPECT ++
-          </p>
-
-        </div>
+<div class="container-bye">
+  <div class="newContainer">
+    <div class="logo-container">
+      <img src="static/HackerzGif.gif" alt="event-logo" class="image">
+      <div class="glitched">
+        <img src="static/Glitched logo.jpg" alt="event-logo" class="image">
+        <img src="static\The_redemption_ark_logo-removebg-preview.png" id="event-img" alt="Event logo" class="image" />
       </div>
+    </div>
+    <div class="">
+      <p class="mission-acc"><span class="success-message"></span></p>
+      <p class="mission-acc"><span class="respect-message"></span></p>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  var typingEffect = new Typed('.success-message', {
+    strings: ["MISSION ACCOMPLISHED"],
+    typeSpeed: 20,
+  });
+  setTimeout(() => {
+    var typingEffect = new Typed('.respect-message', {
+    strings: ["RESPECT++"],
+    typeSpeed: 20,
+  });
+  }, 2000)
+</script>
 {% endblock content%}

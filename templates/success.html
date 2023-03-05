@@ -1,10 +1,9 @@
 {% extends 'base.html' %}
 {% block title %}
-      <title>NAMMA JEICHITOM MAARAA!!!</title>
+<title>NAMMA JEICHITOM MAARAA!!!</title>
 {% endblock title%}
 {% block content %}
-      <div class="container">
-       <!--<div class="img-container">
+<!--<div class="img-container">
           <img
           src="static/Glitched logo.jpg"
           alt="event-logo"
@@ -17,20 +16,40 @@
           class="image"
           />
         </div> -->
-        <div class="right-column">
-          <p class="text">
-            Bravo Leo! We made it! We have successfully recovered all the data of Nexus Entertainment that were lost into the Cyrus grid. Not only that, the solution to the weird file that you deduced was a major vulnerability in its network. <br><br>
-            I inspected its entire network. The flag that you found previously is our only way to kill Cyrus entirely. <br> <br>
-            Let’s do this Leo! Click the button below and let’s finish this once and for all!
-            
-          </p>
-          <form action="/bubyee" method="GET">
-            <button class="cybr-btn">
-             TERMINATE<span aria-hidden></span>
-              <span aria-hidden class="cybr-btn__glitch">TERMINATE</span>
-              <span aria-hidden class="cybr-btn__tag">Cyrus</span>
-            </button>
-          </form>
-        </div>
-      </div>
+<div class="success-page-container">
+  <p><span class="success-message" style="font-size: 25px;"></span></p>
+  <p><span class="success-message1"></span></p>
+  <p><span class="success-message2"></span></p>
+  <form action="/bubyee" method="GET">
+    <button class="cybr-btn">
+      TERMINATE<span aria-hidden></span>
+      <span aria-hidden class="cybr-btn__glitch">TERMINATE</span>
+      <span aria-hidden class="cybr-btn__tag">Cyrus</span>
+    </button>
+  </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  const elem = document.getElementsByClassName('cybr-btn')
+  elem[0].style.display = 'none'
+  var typingEffect = new Typed('.success-message', {
+    strings: ["Bravo Leo! We made it! We have successfully recovered all the data of Nexus Entertainment that were lost into the Cyrus grid. Not only that, the solution to the weird file that you deduced was a major vulnerability in its network."],
+    typeSpeed: 20,
+  });
+  setTimeout(() => {
+    var typingEffect = new Typed('.success-message1', {
+      strings: [" I inspected its entire network. The flag that you found previously is our only way to kill Cyrus entirely. "],
+      typeSpeed: 20,
+    });
+  }, 9000)
+  setTimeout(() => {
+    var typingEffect = new Typed('.success-message2', {
+      strings: [" Let’s do this Leo! Click the button below and let’s finish this once and for all!"],
+      typeSpeed: 20,
+    });
+  }, 12000)
+  setTimeout(() => {
+    elem[0].style.display = "block"
+  }, 15000)
+</script>
 {% endblock content%}

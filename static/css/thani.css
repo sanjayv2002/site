@@ -1,0 +1,22 @@
+.text-index{
+    width: 70%;
+    word-spacing: 0.5em;
+    line-height: 40px;
+    font-size: 25px;
+    text-align: justify;
+}
+
+.text-round1,.list-item{
+    font-size: 25px;
+    padding: 0px;
+    line-height: 30px;
+    word-spacing: 10px;
+    letter-spacing: 3px;
+}
+
+.form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}

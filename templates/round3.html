@@ -11,7 +11,7 @@
 {% endblock round_messages %}
 {% block text_instructions %}
 
-<p>It seems that some of Nexus data is still under the Cyrus grid. There are a lot of text files, images and other cache files in its dataset. <br> <br>
+<p class="text-round1" style="font-size: 20px;">It seems that some of Nexus data is still under the Cyrus grid. There are a lot of text files, images and other cache files in its dataset. <br> <br>
   Firstly, download the archive. Two of the images contain the key to authenticate the grid. Using that key we can crash the entire Cyrus grid. Your task now is to find the right images that contain the encoded key. It might be our way to mark the backdoor that Cyrus used to enter the Nexus’ network. <br> <br>
   Make sure to debug the ‘Unravel’ file before decrypting the images. <br> <br>
   <ol class= "text">
@@ -28,13 +28,13 @@
       <span aria-hidden class="cybr-btn__glitch">ARCHIVE</span>
       <span aria-hidden class="cybr-btn__tag">ARCHIVE</span>
     </button>
-   </form>
-{% endblock text_instructions %}
-{% block form %}
-      
-      <form action  = "{{ url_for('submit_round3') }}" method = "post">
-
-        <input type="text" class="text-field" name="submission" id="submission"><br><br>
+   </form><br> 
+   {% endblock text_instructions %}
+   {% block form %}
+   
+   <form action  = "{{ url_for('submit_round3') }}" method = "post" class="form">
+     
+     <input type="text" class="text-field" name="submission" id="submission"><br>
     
       <button class="cybr-btn">
         UNLOCK<span aria-hidden></span>
