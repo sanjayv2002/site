@@ -14,9 +14,26 @@
     letter-spacing: 3px;
 }
 
+.text-round2, .list-item2{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 20px;
+    line-height: 25px;
+    word-spacing: 10px;
+    letter-spacing: 3px;
+}
+
 .form{
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+}
+
+.round2 {
+    padding: 0px auto;
+}
+
+.download {
+    margin-top: 25px;
 }

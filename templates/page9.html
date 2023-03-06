@@ -4,19 +4,34 @@
 {% endblock round_preview_title %}
 {% block round_messages %}
 {% for category, message in get_flashed_messages(with_categories=True) %}
-  <div class="alert-{{category}}">{{ message }}</div>
+  <div class="alert-{{category}} glow-on-hover-info">{{ message }}</div>
 {% endfor %}
 {% endblock round_messages %}
 {% block intromessage %}
-<p> Neat! You found the key! Now we have access to the backdoor that Cyrus used to infiltrate Nexus. I have shut it down. 
-</p>
+<div class="gifContainer">
+</div>
+<p><span class="success-message" style = "text-align: center; font-size: 40px"></span></p>
 {% endblock intromessage %}
 {% block button %}
 <form action="/round4" method="GET">
-  <button class="cybr-btn">
+  <button class="cybr-btn" id="cybr-btn">
    FINAL TASK<span aria-hidden></span>
     <span aria-hidden class="cybr-btn__glitch">FINAL TASK</span>
     <span aria-hidden class="cybr-btn__tag">FINAL TASK</span>
   </button>
 </form>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  const elem = document.getElementById('cybr-btn')
+  elem.style.display = "none"
+  var typingEffect = new Typed('.success-message', {
+      strings: ["Neat! You found the key! Now we have access to the backdoor that Cyrus used to infiltrate Nexus. I have shut it down. "],
+      typeSpeed: 40,
+  });
+  setTimeout(() => {
+    elem.style.display = "block"
+  },12000)
+</script>
+
 {% endblock button %}

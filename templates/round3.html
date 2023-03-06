@@ -6,23 +6,23 @@
 {% endblock round_title %}
 {% block round_messages %}
 {% for category, message in get_flashed_messages(with_categories=True) %}
-  <div class="alert-{{category}}">{{ message }}</div>
+  <div class="alert-{{category}} glow-on-hover-error round2">{{ message }}</div>
 {% endfor %}
 {% endblock round_messages %}
 {% block text_instructions %}
 
-<p class="text-round1" style="font-size: 20px;">It seems that some of Nexus data is still under the Cyrus grid. There are a lot of text files, images and other cache files in its dataset. <br> <br>
+<p class="text-round2" style="font-size: 17px; ">It seems that some of Nexus data is still under the Cyrus grid. There are a lot of text files, images and other cache files in its dataset. <br> <br>
   Firstly, download the archive. Two of the images contain the key to authenticate the grid. Using that key we can crash the entire Cyrus grid. Your task now is to find the right images that contain the encoded key. It might be our way to mark the backdoor that Cyrus used to enter the Nexus’ network. <br> <br>
-  Make sure to debug the ‘Unravel’ file before decrypting the images. <br> <br>
+  Make sure to debug the ‘Unravel’ file before decrypting the images. <br> <br> </p>
   <ol class= "text">
-    <li class="list-item">Open the  unravel.py  file using IDLE (Python 3.7 64-bit)</li>
-    <li class = "list-item">Debug the syntax errors and run the program.</li>
-    <li class = "list-item">The keys are hidden in two images.</li>
-    <li class = "list-item">Mention the path of the image file one by one and extract the keys.</li>
-    <li  class = "list-item">Concatenate the two keys and enter in the below text field.</li>
+    <li class="list-item2" style="font-size: 17px;">Open the  unravel.py  file using IDLE (Python 3.7 64-bit)</li>
+    <li class = "list-item2"style="font-size: 17px;">Debug the syntax errors and run the program.</li>
+    <li class = "list-item2"style="font-size: 17px;">The keys are hidden in two images.</li>
+    <li class = "list-item2"style="font-size: 17px;">Mention the path of the image file one by one and extract the keys.</li>
+    <li  class = "list-item2"style="font-size: 17px;">Concatenate the two keys and enter in the below text field.</li>
   </ol>
-   </p>
-   <form method= "get" action = "{{ url_for('download')}}">
+  
+   <form method= "get" action = "{{ url_for('download')}}" class="download">
     <button class="cybr-btn">
       ARCHIVE<span aria-hidden></span>
       <span aria-hidden class="cybr-btn__glitch">ARCHIVE</span>

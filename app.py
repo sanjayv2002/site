@@ -93,7 +93,7 @@ def download():
 def submit_round3():
     submission = request.form['submission']
 
-    if submission == ' (0u9_D3_gRa{3_[YRU5':
+    if submission == '(0u9_D3_gRa{3_[YRU5':
         flash("Success","info")
         return redirect(url_for("round4pre"))
     else:

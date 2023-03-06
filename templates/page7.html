@@ -10,7 +10,7 @@
 {% block intromessage %}
 <div class="gifContainer">
 </div>
-<p><span class="success-message" style="text-align: center; font-size: 40px; line-height: 50px;"></span></p>
+<p><span class="success-message" style="text-align: center; font-size: 38px; line-height: 50px;"></span></p>
   
 {% endblock intromessage %}
 {% block button %}
@@ -27,11 +27,11 @@
   const elem = document.getElementById('cybr-btn')
   elem.style.display = "none"
   var typingEffect = new Typed('.success-message', {
-      strings: ["Excellent work! We have encrypted all the Nexus’ customers’ data. While you were busy under this mission, hacked into the Cyrus grid by deploying a backdoor. Now we have complete access to all its data"],
-      typeSpeed: 50,
+      strings: ["Excellent work! We have encrypted all the Nexus’ customers’ data. While you were busy under this mission, I hacked into the Cyrus grid by deploying a backdoor. Now we have complete access to all its data"],
+      typeSpeed: 40,
   });
   setTimeout(() => {
     elem.style.display = "block"
-  },14000)
+  },13000)
 </script>
 {% endblock button %}

@@ -6,23 +6,23 @@
 {% endblock round_title %}
 {% block round_messages %}
 {% for category, message in get_flashed_messages(with_categories=True) %}
-  <div class="alert-{{category}}"> {{ message }}</div>
+  <div class="alert-{{category}} glow-on-hover-error"> {{ message }}</div>
 {% endfor %}
 {% endblock round_messages %}
 {% block text_instructions %}
 
-<p> While running a probe through the Cyrus grid, I came across a weird file. It consists of code that our system is not able to compile. Inspect the file and see whether you could deduce a solution to it. <br> <br>
+<p class="text-round2"> While running a probe through the Cyrus grid, I came across a weird file. It consists of code that our system is not able to compile. Inspect the file and see whether you could deduce a solution to it. <br> <br>
   <ol class= "text">
-    <li class="list-item">Open the ether.sol file using Notepad.</li>
-    <li class = "list-item">Carefully analyze the code and figure out the solution.</li>
-    <li class = "list-item">THE KEY IS IN PLAIN SIGHT!
+    <li class="list-item2">Open the ether.sol file using Notepad.</li>
+    <li class = "list-item2">Carefully analyze the code and figure out the solution.</li>
+    <li class = "list-item2">THE KEY IS IN PLAIN SIGHT!
     </li>
-    <li  class = "list-item">Enter the solution in the below text field to move to the next phase of our mission.</li>
+    <li  class = "list-item2">Enter the solution in the below text field to move to the next phase of our mission.</li>
   </ol>
 </p>
 {% endblock text_instructions %}
 {% block form %}
-      <form action  = "{{ url_for('submit_round4') }}" method = "post">
+      <form action  = "{{ url_for('submit_round4') }}" method = "post" class="form">
        
         <input type="text" class="text-field" name="submission" id="submission"><br><br>
     
