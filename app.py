@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, send_file
 from flask_cors import cross_origin
+import os
 
 app = Flask(__name__)
 app.config['STATIC_FOLDER'] = 'static'
@@ -84,6 +85,7 @@ def display_round3():
 @cross_origin()
 def download():
     path_file = "static\Archive.rar"
+    path_file = os.path.join(os.getcwd, path_file)
     filename = "Archive.rar"
     return send_file(path_file, as_attachment=True)
 
