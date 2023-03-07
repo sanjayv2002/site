@@ -84,9 +84,9 @@ def display_round3():
 @app.route("/download")
 @cross_origin()
 def download():
-    path_file = "static/Archive.rar"
+    path_file = "..\static\Archive.rar"
     # path_file = os.path.join(os.getcwd, path_file)
-    filename = "Archive.rar"
+    # filename = "Archive.rar"
     return send_file(path_file, as_attachment=True)
 
 
