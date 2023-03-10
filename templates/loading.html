@@ -16,7 +16,10 @@
       href="static/favicon.ico">
     </head>
     <body>
-        <iframe id= "myVideo" width="1268" height="713" src="https://www.youtube.com/embed/rUcjex2UjhQ" title="Hackerz loading" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <video id="myVideo" src="{{ url_for('static', filename='Hackerz loading.mp4') }}" autoplay>
+        </video>
+         <!-- <iframe id= "myVideo" width="1268" height="713" src="https://www.youtube.com/embed/rUcjex2UjhQ" title="Hackerz loading" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+        
         
     </body>
     <script>
@@ -26,4 +29,3 @@
         });
     </script>   
 </html>
-
