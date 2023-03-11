@@ -4,18 +4,32 @@
 {% endblock round_preview_title %}
 {% block round_messages %}
 {% for category, message in get_flashed_messages(with_categories=True) %}
-  <div class="alert-{{category}}">{{ message }}</div>
+  <div class="alert-{{category}} glow-on-hover-info">{{ message }}</div>
 {% endfor %}
 {% endblock round_messages %}
 {% block intromessage %}
-<p> Great! We are anonymous now! Let's dive in right into the Cyrus grid</p>
+<div class="gifContainer">
+</div>
+<p><span class="success-message"></span></p>
 {% endblock intromessage %}
 {% block button %}
-<form action="/round2" method="GET">
-  <button class="cybr-btn">
+<form action="/round2" method="GET" class="form-container">
+  <button class="cybr-btn" id="cybr-btn">
    CYRUS<span aria-hidden></span>
     <span aria-hidden class="cybr-btn__glitch">CYRUS</span>
     <span aria-hidden class="cybr-btn__tag">CYRUS</span>
   </button>
 </form>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  const elem = document.getElementById('cybr-btn')
+  elem.style.display = "none"
+  var typingEffect = new Typed('.success-message', {
+      strings: ["Great! We are anonymous now! Let's dive in right into the Cyrus grid"],
+      typeSpeed: 50,
+  });
+  setTimeout(() => {
+    elem.style.display = "block"
+  }, 6000)
+</script>
 {% endblock button %}

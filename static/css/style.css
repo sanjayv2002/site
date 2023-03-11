@@ -22,7 +22,6 @@ canvas {
 
 #text-container {
     position: absolute;
-
     z-index: 1;
     color: white;
     font-size: 36px;
@@ -255,7 +254,7 @@ justify-content: center;
 /* background-color: rgba(0, 0, 0, 0.696); */
 height: 60vh;
 width: 40%;
-margin: 0px 50px;
+margin: 0px 0px;
 border-radius: 20px;
 }
 
@@ -281,8 +280,8 @@ margin-bottom: 50px;
 .text-intro{
     width: 80%;
     word-spacing: 0.5em;
-    line-height: 25px;
-    font-size: 14px;
+    line-height: 30px;
+    font-size: 20px;
     text-align: justify;
 }
 
@@ -302,20 +301,52 @@ margin-bottom: 50px;
 .text-field {
     background-color: rgba(0, 0, 0, 0.75);
     padding: 10px 10px 10px 10px;
-    margin: 10px 10px 10px 10px;
     color: white;
+    width: 400px;
+    border: 1px #4d4d4d solid;
+    border-radius: 10px;
+    height: 30px;
+    font-size: 20px;
 }
 
 .alert-error {
-    background-color: red;
+    background-color: #cb5353;
     color: white;
-  }
-  
-  .alert-info {
+    text-align: center;
+    width: 700px;
+    margin: 0px auto;
+    padding: 10px;
+}
+
+.alert-info {
     background-color: yellow;
     color: black;
-  }
-.gifContainer{
-   border-radius: 50%;
-    box-shadow: 0 0 15px 15px black inset;
+    text-align: center;
+    width: 700px;
+    margin: 0px auto;
+    padding: 10px;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+.success-page-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    text-align: center;
+}
+
+.success-message1{
+    font-size: 30px;
+}
+.success-message2{
+    font-size: 30px;
+}
+
+.container-bye{
+    margin: 0px auto;
 }

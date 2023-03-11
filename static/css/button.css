@@ -1,0 +1,176 @@
+.glow-on-hover-error {
+    width: 50vw;
+    height: 70px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    
+}
+
+.glow-on-hover-error:before {
+    content: '';
+    background: linear-gradient(45deg, #f70101, #ff0285, #ff6f00);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover-error:active {
+    color: #000
+}
+
+.glow-on-hover-error:active:after {
+    background: transparent;
+}
+
+.glow-on-hover-error:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.custom-message{
+    text-align: center;
+    margin: 0px auto;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 40px;
+}
+
+.glow-on-hover-info {
+    width: 50vw;
+    height: 70px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    
+}
+
+.glow-on-hover-info:before {
+    content: '';
+    background: linear-gradient(45deg, #36f701, #02ffdd, #c3ff00);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover-info:active {
+    color: #000
+}
+
+.glow-on-hover-info:active:after {
+    background: transparent;
+}
+
+.glow-on-hover-info:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.content-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+}
+
+.success-message{
+    font-size: 50px;
+}
+.respect-message{
+    font-size: 50px;
+}
+
+.gifContainer{
+    background-image: url(../Cognex.gif);
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size: 600px 900px;
+    
+}
+
+.logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glitched{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mission-acc{
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+
+.text-container{
+    width: 100vw;
+}
+
+.newContainer{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    margin-top: 100px;
+}

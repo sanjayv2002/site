@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, send_file
 from flask_cors import cross_origin
+import os
 
 app = Flask(__name__)
 app.config['STATIC_FOLDER'] = 'static'
@@ -83,8 +84,9 @@ def display_round3():
 @app.route("/download")
 @cross_origin()
 def download():
-    path_file = "static\Archive.rar"
-    filename = "Archive.rar"
+    path_file = "static/Archive.rar"
+    # path_file = os.path.join(os.getcwd, path_file)
+    # filename = "Archive.rar"
     return send_file(path_file, as_attachment=True)
 
 
@@ -93,7 +95,7 @@ def download():
 def submit_round3():
     submission = request.form['submission']
 
-    if submission == ' (0u9_D3_gRa{3_[YRU5':
+    if submission == '(0u9_D3_gRa{3_[YRU5':
         flash("Success","info")
         return redirect(url_for("round4pre"))
     else:
@@ -135,5 +137,5 @@ def bubyee():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug = False, port = os.getenv("PORT", default = 5000))
 
