@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>BEEP! BEEP!  </title>
+        <style>
+            body{
+                box-sizing: border-box;
+                margin: 0px;
+                padding: 0px;
+                overflow: hidden;
+            }
+        </style>
+        <link rel="icon"
+      type="image/ico"
+      href="static/favicon.ico">
+    </head>
+    <body>
+        <video id="myVideo" src="{{ url_for('static', filename='Hackerz loading.mp4') }}" autoplay>
+        </video>
+         <!-- <iframe id= "myVideo" width="1268" height="713" src="https://www.youtube.com/embed/rUcjex2UjhQ" title="Hackerz loading" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+        
+        
+    </body>
+    <script>
+        const video = document.getElementById("myVideo");
+        video.addEventListener("ended", function() {
+            window.location.href = "/assistant"; // replace "/" with the desired page URL
+        });
+    </script>   
+</html>

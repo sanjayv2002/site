@@ -1,0 +1,55 @@
+{% extends 'roundbase.html' %}
+{% block round_title %}
+<title> Round One </title>
+
+{% endblock round_title %}
+{% block round_messages %}
+{% for category, message in get_flashed_messages(with_categories=True) %}
+
+{% if category == 'error' %}
+<button class="glow-on-hover-{{category}} custom-message" type="button">{{ message }}</button>
+{% endif %}
+{% endfor %}
+{% endblock round_messages %}
+
+{% block text_instructions %}
+
+<p class="text-round1">
+  Our first task is to conceal our identity before infiltrating the Cyrus grid. <br><br>
+  I don’t think proxy servers are going to be efficient enough for this huge mission. I think it is high time that we
+  deploy our fast and secure BulwarkVPN.
+<ol class="text">
+  <li class="list-item">Open the bulwark.py file using IDLE (Python 3.7 64-bit)</li>
+  <li class="list-item">Debug the syntax errors and run the program.</li>
+  <li class="list-item">Input the IP address is: 108.11.0.1</li>
+  <li class="list-item">Enter the masked IP address in the below text field to proceed.</li>
+</ol>
+</p>
+{% endblock text_instructions %}
+{% block form %}
+
+<form action="{{ url_for('submit_round1') }}" class="form" method="post">
+  <input type="text" name="submission" class="text-field" id="submission"><br>
+  <button class="cybr-btn">
+    AUTHENTICATE<span aria-hidden></span>
+    <span aria-hidden class="cybr-btn__glitch">AUTHENTICATE</span>
+    <span aria-hidden class="cybr-btn__tag">AUTHENTICATE</span>
+  </button>
+</form>
+
+<div id="timer">
+  <span id="minutes"></span>:
+  <span id="seconds"></span>
+</div>
+<script>
+  function upTimer ( count ) { return count > 9 ? count : "0" + count; }
+  
+  setInterval( function(){
+    var second =( new Date() - new Date(sessionStorage.getItem("startTime")))/1000;
+    document.getElementById("seconds").innerHTML= upTimer(parseInt(second % 60));
+    document.getElementById("minutes").innerHTML= upTimer(parseInt(second / 60, 10));
+  }, 1000);
+</script>
+
+
+{% endblock form %}

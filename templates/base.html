@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        {% block title %}
+            <title> base </title>
+        {% endblock title %}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <link rel="icon"
+      type="image/ico"
+      href="static/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="./static/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="./static/css/button.css" />
+        <link rel="stylesheet" type="text/css" href="./static/css/thani.css" />
+    </head>
+    <body>
+        <div id="hackerzdiv">
+            <img src="static\CODE RED WHITE.png" alt="hackers logo" id="hackerzdiv" />
+        </div>
+        
+        <div id="text-container" class="text-container">
+        {% block message %}
+        
+        {% endblock message %}
+        {% block content %}
+            <p> Enter content</p>
+        {% endblock content %}
+        </div>
+        <canvas></canvas>
+    </body>
+    <script>
+        // Initialising the canvas
+        var canvas = document.querySelector("canvas"),
+          ctx = canvas.getContext("2d");
+    
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        // Setting the width and height of the canvas
+    
+        // Setting up the letters
+        var letters =
+          "ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ";
+        letters = letters.split("");
+    
+        // Setting up the columns
+        var fontSize = 10,
+          columns = canvas.width / fontSize;
+    
+        // Setting up the drops
+        var drops = [];
+        for (var i = 0; i < columns; i++) {
+          drops[i] = 1;
+        }
+    
+        // Setting up the draw function
+        function draw() {
+          ctx.fillStyle = "rgba(0, 0, 0, .1)";
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+          for (var i = 0; i < drops.length; i++) {
+            var text = letters[Math.floor(Math.random() * letters.length)];
+            ctx.fillStyle = "red";
+            ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+            drops[i]++;
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.95) {
+              drops[i] = 0;
+            }
+          }
+        }
+    
+        // Loop the animation
+        setInterval(draw, 33);
+      </script>
+    </html>
+    

@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>NAMMA JEICHITOM MAARAA!!!</title>
+{% endblock title%}
+{% block content %}
+<!--<div class="img-container">
+          <img
+          src="static/Glitched logo.jpg"
+          alt="event-logo"
+          class="image"
+          >
+          <img
+          src="static\The_redemption_ark_logo-removebg-preview.png"
+          id="event-img"
+          alt="Event logo"
+          class="image"
+          />
+        </div> -->
+<div class="success-page-container">
+  <p><span class="success-message" style="font-size: 25px; word-spacing: 3px;"></span></p>
+  <p><span class="success-message1" style="font-size: 25px; word-spacing: 3px;"></span></p>
+  <p><span class="success-message2"style="font-size: 25px; word-spacing: 3px;"></span></p>
+  <form action="/bubyee" method="GET">
+    <button class="cybr-btn">
+      TERMINATE<span aria-hidden></span>
+      <span aria-hidden class="cybr-btn__glitch">TERMINATE</span>
+      <span aria-hidden class="cybr-btn__tag">Cyrus</span>
+    </button>
+  </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  if(!sessionStorage.getItem("endTime")){
+    sessionStorage.setItem("endTIme", new Date());
+  }
+  const elem = document.getElementsByClassName('cybr-btn')
+  elem[0].style.display = 'none'
+  var typingEffect = new Typed('.success-message', {
+    strings: ["Bravo Leo! We made it! We have successfully recovered all the data of Nexus Entertainment that were lost into the Cyrus grid. Not only that, the solution to the weird file that you deduced was a major vulnerability in its network."],
+    typeSpeed: 20,
+  });
+  setTimeout(() => {
+    var typingEffect = new Typed('.success-message1', {
+      strings: [" I inspected its entire network. The flag that you found previously is our only way to kill Cyrus entirely. "],
+      typeSpeed: 20,
+    });
+  }, 9500)
+  setTimeout(() => {
+    var typingEffect = new Typed('.success-message2', {
+      strings: [" Let’s do this Leo! Click the button below and let’s finish this once and for all!"],
+      typeSpeed: 20,
+    });
+  }, 13000)
+  setTimeout(() => {
+    elem[0].style.display = "block"
+  }, 16000)
+</script>
+{% endblock content%}

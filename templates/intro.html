@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}
+      <title>RATATA RATATA TADA! </title>
+{% endblock title%}
+{% block content %}
+    <div class = "container">
+        <div class= "right-column">
+            <img 
+            class= "gif-container"
+            src = "static\Cognex.gif" 
+            id = "event-img" 
+            alt="Event logo"
+            />
+        </div>
+        <div class= "right-column">
+            <p class = "text-intro"> Vyom runs his own gaming company, Nexus Entertainment. He is very skilled in his craft and he has hundreds of people working under him. Some of the highest ranked games in the world are developed by Nexus. Yesterday, while everyone was testing their newly developed game called Phoenix, all the computers started to go haphazard. All began to crash. It was complete panic and chaos. <br> <br> 
+              All the monitors displayed the name <em><strong>CYRUS</strong></em>. Within a few seconds a second message popped up, and it went like <em><strong>"NEXUS - THE NEXT PREY"</strong></em>. Vyom traced the virus back to a mysterious hacker who went by the name of Cyrus. <br><br> 
+              Vyom is immediately in need of our help to remove the virus and secure his network while they are losing their customers’ data. If we are on the right track, we can even bring the entire grid of Cyrus down. <br><br> 
+              So let’s get to work right away!
+              
+                 </p>
+            <form action  = "{{ url_for('display_round1')}}" method = "GET">
+            <button class="cybr-btn" onclick="setTimerOn()">
+                ACTIVATE<span aria-hidden></span>
+                <span aria-hidden class="cybr-btn__glitch">ACTIVATE</span>
+                <span aria-hidden class="cybr-btn__tag">SERVERS</span>
+            </button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function setTimerOn(){
+            if(! sessionStorage.getItem("startTime")){
+                sessionStorage.setItem("startTime", new Date());
+            }
+        }
+    </script>
+{% endblock content%}

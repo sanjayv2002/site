@@ -1,0 +1,53 @@
+{% extends 'roundbase.html' %}
+{% block round_title %}
+
+<title>Round Two</title>
+
+{% endblock round_title %}
+{% block round_messages %}
+{% for category, message in get_flashed_messages(with_categories=True) %}
+<div class="alert-{{category}} glow-on-hover-error">{{ message }}</div>
+{% endfor %}
+{% endblock round_messages %}
+{% block text_instructions %}
+
+<p class="text-round1" style="font-size: 20px;">We must secure the customers’ data at once. The attack on Nexus is quite inexplicable. I tried installing our data
+  encryption software Ruby on Nexus, but the Cyrus virus is sturdy. It entirely collapsed our codes. I need your manual
+  help to resolve this issue.</p>
+<ol class="text">
+  <li class="list-item" style="font-size: 20px;">Open the ruby_crypt.py file using IDLE (Python 3.7 64-bit).</li>
+  <li class="list-item" style="font-size: 20px;">Debug the syntax errors and run the program.</li>
+  <li class="list-item" style="font-size: 20px;text-align: left;">Input the following credentials once you have rectified the errors: <br>
+    <span style="text-align: left;">a. Text value: NEXUS ENTERTAINMENT</span>  <br>
+    b. Key value: CYRUS
+  </li>
+  <li class="list-item"  style="font-size: 20px;">Once the encryption is successful, enter the Cipher value in the below text field to advance to
+    the next level.</li>
+</ol>
+
+{% endblock text_instructions %}
+{% block form %}
+
+<form action="{{ url_for('submit_round2') }}" method="post" class="form">
+  <input type="text" class="text-field" name="submission" id="submission"><br>
+  <button class="cybr-btn">
+    VALIDATE<span aria-hidden></span>
+    <span aria-hidden class="cybr-btn__glitch">VALIDATE</span>
+    <span aria-hidden class="cybr-btn__tag">VALIDATE</span>
+  </button>
+</form>
+
+<div id="timer">
+  <span id="minutes"></span>:
+  <span id="seconds"></span>
+</div>
+<script>
+  function upTimer ( count ) { return count > 9 ? count : "0" + count; }
+  
+  setInterval( function(){
+    var second =( new Date() - new Date(sessionStorage.getItem("startTime")))/1000;
+    document.getElementById("seconds").innerHTML= upTimer(parseInt(second % 60));
+    document.getElementById("minutes").innerHTML= upTimer(parseInt(second / 60, 10));
+  }, 1000);
+</script>
+{% endblock form %}

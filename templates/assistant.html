@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}
+      <title>HOW MAY I WELP U!</title>
+{% endblock title%}
+{% block content %}
+  <div class = "container">
+    <div class= "img-container">
+      <img 
+      src = "static\Cognex.gif" 
+      id = "event-img" 
+      alt="Event logo" 
+      class = "gif "
+      />
+    </div>
+    <div class= "right-column">
+      <p class = "text-index"> Hey Leo! I am Cognex, your AI assistant.  I will be assisting you through all the tasks. And today, we have been assigned a very critical mission! <br><br>
+        The resources of a gaming organization have been compromised. We must begin our mission at once to recover their data.<br><br>
+        When you’re ready, click the launch button and let me brief you on the mission.
+         </p>
+      <form action  = "/intro" method = "GET">
+      <button class="cybr-btn">
+        LAUNCH<span aria-hidden></span>
+        <span aria-hidden class="cybr-btn__glitch">LAUNCH</span>
+        <span aria-hidden class="cybr-btn__tag">OPERATION</span>
+      </button>
+    </form>
+    
+    </div>
+    </div>
+{% endblock content%}
